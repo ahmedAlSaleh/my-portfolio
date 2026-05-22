@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ahmed Al-Saleh portfolio: Flutter mobile apps, backend-supported products, Firebase integrations, and professional mobile engineering case studies."
+    />
+    <title>Ahmed Al-Saleh | Flutter Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="Ahmed Al-Saleh home">
+          <span class="brand-mark">A</span>
+          <span data-i18n="brand">Ahmed Al-Saleh</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+        <div class="nav-links" data-nav-links>
+          <a href="#websites" data-i18n="navWebsites">Websites</a>
+          <a href="#projects" data-i18n="navProjects">Projects</a>
+          <a href="#skills" data-i18n="navSkills">Skills</a>
+          <a href="#experience" data-i18n="navExperience">Experience</a>
+          <a href="#services" data-i18n="navServices">Services</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+          <button class="language-toggle" type="button" aria-label="Switch language" data-lang-toggle>AR</button>
+          <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">
+            <i data-lucide="sun"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="home" class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">Syria | Remote mobile engineering</p>
+          <h1>AHMED AL-SALEH</h1>
+          <p class="hero-title" data-i18n="heroTitle">Flutter Developer | Mobile Engineer with Backend Development Experience using Node.js</p>
+          <p class="hero-summary" data-i18n="heroSummary">
+            Flutter developer with 4+ years of experience building cross-platform Android and iOS apps. I focus on
+            clean mobile architecture, Firebase-powered products, REST API integrations, and backend-aware delivery with
+            Node.js and NestJS.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="btn primary" href="#projects"><i data-lucide="layout-grid"></i><span data-i18n="viewProjects">View Projects</span></a>
+            <a class="btn secondary" href="https://wa.me/963992086301" target="_blank" rel="noopener"><i data-lucide="message-circle"></i><span data-i18n="whatsappMe">WhatsApp Me</span></a>
+            <a class="btn secondary" href="#contact"><i data-lucide="send"></i><span data-i18n="contactMe">Contact Me</span></a>
+            <button class="btn ghost" type="button" disabled title="CV will be enabled after the file is added">
+              <i data-lucide="file-down"></i><span data-i18n="downloadCv">Download CV</span>
+            </button>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Portfolio preview">
+          <div class="portrait-panel">
+            <img src="photo/Personal Photo.png" alt="Ahmed Al-Saleh professional portrait" />
+            <div>
+              <strong data-i18n="portraitYears">4+ years</strong>
+              <span data-i18n="portraitText">Flutter and mobile app development</span>
+            </div>
+          </div>
+          <div class="phone-stack" data-hero-gallery></div>
+        </div>
+      </section>
+
+      <section class="stats section compact" aria-label="Career highlights">
+        <div class="stat"><strong>10+</strong><span data-i18n="statApps">Freelance Flutter apps delivered</span></div>
+        <div class="stat"><strong>7</strong><span data-i18n="statProjects">Featured app case studies</span></div>
+        <div class="stat"><strong>Node.js</strong><span data-i18n="statBackend">Backend collaboration experience</span></div>
+        <div class="stat"><strong>Remote</strong><span data-i18n="statRemote">Agile delivery and team leadership</span></div>
+      </section>
+
+      <section id="websites" class="section websites-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="websitesEyebrow">Website work</p>
+          <h2 data-i18n="websitesTitle">Responsive website showcases</h2>
+          <p data-i18n="websitesDesc">
+            A horizontal showcase of public websites presented inside browser-style previews, built to highlight landing pages, menus, service pages, and polished responsive layouts.
+          </p>
+        </div>
+        <div class="website-rail" data-website-rail aria-label="Website showcase"></div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="projectsEyebrow">Selected work</p>
+          <h2 data-i18n="projectsTitle">Featured mobile products</h2>
+          <p data-i18n="projectsDesc">
+            A curated presentation of production-style mobile interfaces across commerce, education, appointments,
+            delivery, booking, and service marketplace flows.
+          </p>
+        </div>
+        <div class="project-grid" data-project-grid></div>
+      </section>
+
+      <section id="case-studies" class="section case-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="casesEyebrow">Case studies</p>
+          <h2 data-i18n="casesTitle">Project details</h2>
+          <p data-i18n="casesDesc">Each case study highlights the product purpose, core flows, technical focus, and screenshot gallery.</p>
+        </div>
+        <div class="case-list" data-case-list></div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="skillsEyebrow">Engineering stack</p>
+          <h2 data-i18n="skillsTitle">Skills and technologies</h2>
+          <p data-i18n="skillsDesc">Mobile-first implementation skills supported by backend, database, delivery, and AI-assisted workflows.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card"><i data-lucide="smartphone"></i><h3 data-i18n="skillMobile">Mobile</h3><p>Flutter, Dart, Android, iOS</p></article>
+          <article class="skill-card"><i data-lucide="workflow"></i><h3 data-i18n="skillArchitecture">State & Architecture</h3><p>Riverpod, BLoC, Provider, GetX, Clean Architecture, MVVM, SOLID</p></article>
+          <article class="skill-card"><i data-lucide="server"></i><h3 data-i18n="skillBackend">Backend & APIs</h3><p>Node.js, Express.js, NestJS, REST APIs, GraphQL, JWT, RBAC</p></article>
+          <article class="skill-card"><i data-lucide="flame"></i><h3 data-i18n="skillFirebase">Firebase & Services</h3><p>Firebase Auth, Firestore, FCM, Crashlytics, Analytics</p></article>
+          <article class="skill-card"><i data-lucide="database"></i><h3 data-i18n="skillDatabases">Databases</h3><p>PostgreSQL, MySQL, MongoDB, SQLite, Hive, Supabase</p></article>
+          <article class="skill-card"><i data-lucide="rocket"></i><h3 data-i18n="skillDelivery">Delivery</h3><p>Unit, widget, and integration testing, CI/CD, Docker, Git, GitHub, GitLab</p></article>
+        </div>
+      </section>
+
+      <section id="experience" class="section split">
+        <div class="section-heading sticky-heading">
+          <p class="eyebrow" data-i18n="experienceEyebrow">Experience</p>
+          <h2 data-i18n="experienceTitle">Mobile development with backend awareness</h2>
+          <p data-i18n="experienceDesc">Practical experience across freelance delivery, team leadership, Flutter product work, and backend services.</p>
+        </div>
+        <div class="timeline">
+          <article><span>Jan 2025 - May 2025</span><h3 data-i18n="expBackendTitle">Backend Developer | Node.js / NestJS</h3><p data-i18n="expBackendText">Built backend services, JWT authentication, RBAC, REST and GraphQL APIs, with Docker and CI/CD support.</p></article>
+          <article><span>Jan 2024 - May 2024</span><h3 data-i18n="expLeadTitle">Project Manager & Team Leader | Heronet Sweden</h3><p data-i18n="expLeadText">Led a remote team of 7 developers across 3 mobile app projects using Agile workflows.</p></article>
+          <article><span>Mar 2023 - Nov 2023</span><h3 data-i18n="expPirlaTitle">Mobile Application Developer | Pirla Tech</h3><p data-i18n="expPirlaText">Built Flutter apps, integrated Firebase/MySQL, supported CI/CD, payments, and performance optimization.</p></article>
+          <article><span>Jan 2022 - Present</span><h3 data-i18n="expFreelanceTitle">Freelance Flutter Developer</h3><p data-i18n="expFreelanceText">Delivered 10+ Flutter apps with Firebase, OAuth2, Maps SDK, payment APIs, and clean architecture.</p></article>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="servicesEyebrow">Services</p>
+          <h2 data-i18n="servicesTitle">What I can build</h2>
+        </div>
+        <div class="service-grid">
+          <article><i data-lucide="app-window"></i><span data-i18n="serviceFlutter">Mobile app development using Flutter</span></article>
+          <article><i data-lucide="cloud"></i><span data-i18n="serviceFirebase">Application development using Firebase</span></article>
+          <article><i data-lucide="plug"></i><span data-i18n="serviceApi">API integration and backend-connected app flows</span></article>
+          <article><i data-lucide="shield-check"></i><span data-i18n="serviceBackend">Backend support using Node.js and NestJS</span></article>
+          <article><i data-lucide="package-check"></i><span data-i18n="serviceDeploy">App deployment and launch preparation</span></article>
+          <article><i data-lucide="figma"></i><span data-i18n="serviceUi">Implementation of user interfaces from ready-made designs</span></article>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div>
+          <p class="eyebrow" data-i18n="aboutEyebrow">About</p>
+          <h2 data-i18n="aboutTitle">Engineer focused on reliable mobile products</h2>
+        </div>
+        <div class="about-copy">
+          <p data-i18n="aboutText">
+            I build cross-platform mobile applications with Flutter and Dart, supported by hands-on experience in
+            Firebase, REST APIs, databases, and Node.js/NestJS backend development. My work combines implementation
+            quality, clean architecture, and practical delivery habits shaped by freelance and remote team environments.
+          </p>
+          <div class="about-meta">
+            <span data-i18n="aboutEducation">Education: Informatics Engineering, Syrian Virtual University</span>
+            <span data-i18n="aboutLanguages">Languages: Arabic native, English fluent</span>
+            <span data-i18n="aboutCerts">Certifications: PMP, Agile Scrum, Firebase / Cloud credential</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="contact-card">
+          <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+          <h2 data-i18n="contactTitle">Let's discuss your mobile product</h2>
+          <p data-i18n="contactDesc">Available for remote Flutter development, Firebase apps, API integration, and backend-supported mobile work.</p>
+          <div class="contact-actions">
+            <a class="btn primary" href="mailto:asmlahmd15@gmail.com"><i data-lucide="mail"></i><span data-i18n="emailMe">Email Me</span></a>
+            <a class="btn secondary" href="https://wa.me/963992086301" target="_blank" rel="noopener"><i data-lucide="message-circle"></i><span data-i18n="callWhatsapp">Call / WhatsApp</span></a>
+          </div>
+          <div class="socials" aria-label="Social media links">
+            <a href="https://www.linkedin.com/in/ahmed-al-saleh-b74958348?utm_source=share_via&utm_content=profile&utm_medium=member_android">LinkedIn</a>
+            <a href="https://github.com/ahmedAlSaleh">GitHub</a>
+            <a href="https://www.youtube.com/@Ahmed-AlSaleh">YouTube</a>
+            <a href="https://www.facebook.com/ahmed.mood.3511/">Facebook</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span data-i18n="footerText">© 2026 Ahmed Al-Saleh. Flutter Developer Portfolio.</span>
+      <a href="#home" data-i18n="backTop">Back to top</a>
+    </footer>
+
+    <a class="floating-whatsapp" href="https://wa.me/963992086301" target="_blank" rel="noopener" aria-label="Contact Ahmed on WhatsApp">
+      <i data-lucide="message-circle"></i>
+      <span data-i18n="floatingWhatsapp">WhatsApp</span>
+      <strong dir="ltr">+963 992 086 301</strong>
+    </a>
+
+    <dialog class="gallery-dialog" data-gallery-dialog>
+      <button class="dialog-close" type="button" aria-label="Close gallery" data-dialog-close>
+        <i data-lucide="x"></i>
+      </button>
+      <img src="" alt="" data-dialog-image />
+      <p data-dialog-caption></p>
+    </dialog>
+  </body>
+</html>
