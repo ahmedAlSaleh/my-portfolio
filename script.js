@@ -22,6 +22,15 @@ const i18n = {
     statProjects: "Featured app case studies",
     statBackend: "Backend collaboration experience",
     statRemote: "Agile delivery and team leadership",
+    processEyebrow: "How I work",
+    processTitle: "From a clear idea to a confident launch.",
+    processDesc: "A focused three-step process that keeps product decisions visible, delivery controlled, and the final experience ready for real users.",
+    processDiscoveryTitle: "Discovery",
+    processDiscoveryText: "We clarify the product goal, key users, priority flows, and the technical path before development starts.",
+    processBuildTitle: "Build",
+    processBuildText: "I turn the plan into clean Flutter screens, connected APIs, and an experience reviewed in focused iterations.",
+    processLaunchTitle: "Launch",
+    processLaunchText: "We test the essential paths, prepare release assets, and hand over a product ready to grow.",
     projectsEyebrow: "Selected work",
     projectsTitle: "Featured mobile products",
     projectsDesc:
@@ -107,6 +116,15 @@ const i18n = {
     statProjects: "دراسات حالة لمشاريع مميزة",
     statBackend: "خبرة تعاون Backend",
     statRemote: "تسليم Agile وقيادة فرق عن بعد",
+    processEyebrow: "كيف أعمل",
+    processTitle: "من فكرة واضحة إلى إطلاق واثق.",
+    processDesc: "ثلاث مراحل مركزة تجعل قرارات المنتج واضحة، والتنفيذ منظمًا، والنتيجة جاهزة للمستخدمين الحقيقيين.",
+    processDiscoveryTitle: "الاكتشاف",
+    processDiscoveryText: "نحدد هدف المنتج، والمستخدمين، وأهم التدفقات، والمسار التقني قبل بدء التنفيذ.",
+    processBuildTitle: "البناء",
+    processBuildText: "أحوّل الخطة إلى شاشات Flutter نظيفة وواجهات API متصلة وتجربة تُراجع على مراحل مركزة.",
+    processLaunchTitle: "الإطلاق",
+    processLaunchText: "نختبر المسارات الأساسية، ونجهز متطلبات النشر، ونسلّم منتجًا جاهزًا للنمو.",
     projectsEyebrow: "أعمال مختارة",
     projectsTitle: "منتجات موبايل مميزة",
     projectsDesc:
@@ -489,7 +507,6 @@ const dialogCaption = document.querySelector("[data-dialog-caption]");
 const closeDialog = document.querySelector("[data-dialog-close]");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector("[data-nav-links]");
-const themeToggle = document.querySelector(".theme-toggle");
 const languageToggle = document.querySelector("[data-lang-toggle]");
 const urlLang = new URLSearchParams(window.location.search).get("lang");
 let currentLang = ["en", "ar"].includes(urlLang) ? urlLang : localStorage.getItem("portfolio-lang") || "en";
@@ -676,17 +693,6 @@ function setupNavigation() {
   });
 }
 
-function setupTheme() {
-  const savedTheme = localStorage.getItem("portfolio-theme");
-  if (savedTheme) document.documentElement.dataset.theme = savedTheme;
-
-  themeToggle.addEventListener("click", () => {
-    const nextTheme = document.documentElement.dataset.theme === "light" ? "dark" : "light";
-    document.documentElement.dataset.theme = nextTheme;
-    localStorage.setItem("portfolio-theme", nextTheme);
-  });
-}
-
 function setupLanguage() {
   languageToggle.addEventListener("click", () => {
     currentLang = currentLang === "ar" ? "en" : "ar";
@@ -705,7 +711,6 @@ function setupWebsiteSliderControls() {
 renderHeroGallery();
 setupGalleryDialog();
 setupNavigation();
-setupTheme();
 setupLanguage();
 setupWebsiteSliderControls();
 applyTranslations();
