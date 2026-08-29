@@ -17,8 +17,33 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
     <script src="script.js" defer></script>
+    <script type="module" src="scene.js"></script>
   </head>
   <body>
+    <div class="cinematic-stage" aria-hidden="true">
+      <canvas id="cosmos-canvas"></canvas>
+      <div class="stage-grid"></div>
+      <div class="stage-noise"></div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <div class="intro-loader" aria-hidden="true">
+      <div class="intro-loader__scene">
+        <div class="intro-code-cube">
+          <span class="intro-code-face intro-code-face--front">&lt;/&gt;</span>
+          <span class="intro-code-face intro-code-face--back">API</span>
+          <span class="intro-code-face intro-code-face--right">{ }</span>
+          <span class="intro-code-face intro-code-face--left">01</span>
+          <span class="intro-code-face intro-code-face--top">const</span>
+          <span class="intro-code-face intro-code-face--bottom">Flutter</span>
+        </div>
+        <span class="intro-code-token intro-code-token--one">async</span>
+        <span class="intro-code-token intro-code-token--two">build()</span>
+        <span class="intro-code-token intro-code-token--three">&lt;/&gt;</span>
+      </div>
+      <div class="intro-loader__mark">AHMED <span>AL-SALEH</span></div>
+      <p>FLUTTER · MOBILE · BACKEND</p>
+      <span class="intro-loader__line"></span>
+    </div>
     <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
     <header class="site-header">
       <nav class="nav" aria-label="Primary navigation">
@@ -37,18 +62,17 @@
           <a href="#services" data-i18n="navServices">Services</a>
           <a href="#contact" data-i18n="navContact">Contact</a>
           <button class="language-toggle" type="button" aria-label="Switch language" data-lang-toggle>AR</button>
-          <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">
-            <i data-lucide="sun"></i>
-          </button>
         </div>
       </nav>
     </header>
 
     <main id="main">
       <section id="home" class="hero section">
+        <div class="hero-orbit hero-orbit--one" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit--two" aria-hidden="true"></div>
         <div class="hero-copy">
           <p class="eyebrow" data-i18n="heroEyebrow">Syria | Remote mobile engineering</p>
-          <h1>AHMED AL-SALEH</h1>
+          <h1 class="hero-name">AHMED AL-SALEH</h1>
           <p class="hero-title" data-i18n="heroTitle">Flutter Developer | Mobile Engineer with Backend Development Experience using Node.js</p>
           <p class="hero-summary" data-i18n="heroSummary">
             Flutter developer with 4+ years of experience building cross-platform Android and iOS apps. I focus on
@@ -65,6 +89,8 @@
           </div>
         </div>
         <div class="hero-visual" aria-label="Portfolio preview">
+          <div class="hero-visual__stamp" aria-hidden="true"><span>SCROLL</span><i>↘</i></div>
+          <div class="hero-visual__ring" aria-hidden="true"></div>
           <div class="portrait-panel">
             <img src="photo/Personal Photo.png" alt="Ahmed Al-Saleh professional portrait" />
             <div>
@@ -81,6 +107,54 @@
         <div class="stat"><strong>7</strong><span data-i18n="statProjects">Featured app case studies</span></div>
         <div class="stat"><strong>Node.js</strong><span data-i18n="statBackend">Backend collaboration experience</span></div>
         <div class="stat"><strong>Remote</strong><span data-i18n="statRemote">Agile delivery and team leadership</span></div>
+      </section>
+
+      <section id="process" class="section process-section" aria-label="How I work">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="processEyebrow">How I work</p>
+          <h2 data-i18n="processTitle">From a clear idea to a confident launch.</h2>
+          <p data-i18n="processDesc">A focused three-step process that keeps product decisions visible, delivery controlled, and the final experience ready for real users.</p>
+        </div>
+        <div class="process-steps">
+          <span class="process-flow process-flow--one" aria-hidden="true"></span>
+          <span class="process-flow process-flow--two" aria-hidden="true"></span>
+          <article class="process-step">
+            <span class="process-step__number">01</span>
+            <i data-lucide="compass"></i>
+            <h3 data-i18n="processDiscoveryTitle">Discovery</h3>
+            <p data-i18n="processDiscoveryText">We clarify the product goal, key users, priority flows, and the technical path before development starts.</p>
+          </article>
+          <article class="process-step">
+            <span class="process-step__number">02</span>
+            <i data-lucide="code-2"></i>
+            <h3 data-i18n="processBuildTitle">Build</h3>
+            <p data-i18n="processBuildText">I turn the plan into clean Flutter screens, connected APIs, and an experience reviewed in focused iterations.</p>
+          </article>
+          <article class="process-step">
+            <span class="process-step__number">03</span>
+            <i data-lucide="rocket"></i>
+            <h3 data-i18n="processLaunchTitle">Launch</h3>
+            <p data-i18n="processLaunchText">We test the essential paths, prepare release assets, and hand over a product ready to grow.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="manifesto section" aria-label="Portfolio statement">
+        <p class="eyebrow">BUILT TO BE REMEMBERED</p>
+        <div class="manifesto__layout">
+          <h2>Not another<br /><em>developer portfolio.</em></h2>
+          <div class="manifesto__copy">
+            <span class="manifesto__line"></span>
+            <p>I turn product ideas into living digital experiences — from the architecture beneath the screen to the interaction that makes a user stay.</p>
+            <div class="manifesto__chips" aria-label="Technologies and delivery strengths">
+              <span>Flutter</span><span>Dart</span><span>Riverpod</span><span>BLoC</span><span>Provider</span><span>GetX</span>
+              <span>Firebase</span><span>Node.js</span><span>Express.js</span><span>NestJS</span><span>REST APIs</span><span>GraphQL</span>
+              <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>SQLite</span><span>Hive</span><span>Supabase</span>
+              <span>JWT</span><span>RBAC</span><span>Docker</span><span>CI/CD</span><span>Git</span><span>Clean Architecture</span>
+              <span>Product thinking</span><span>Backend aware</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="websites" class="section websites-section">
@@ -156,7 +230,7 @@
           <article><i data-lucide="plug"></i><span data-i18n="serviceApi">API integration and backend-connected app flows</span></article>
           <article><i data-lucide="shield-check"></i><span data-i18n="serviceBackend">Backend support using Node.js and NestJS</span></article>
           <article><i data-lucide="package-check"></i><span data-i18n="serviceDeploy">App deployment and launch preparation</span></article>
-          <article><i data-lucide="figma"></i><span data-i18n="serviceUi">Implementation of user interfaces from ready-made designs</span></article>
+          <article><i data-lucide="pen-tool"></i><span data-i18n="serviceUi">Implementation of user interfaces from ready-made designs</span></article>
         </div>
       </section>
 
